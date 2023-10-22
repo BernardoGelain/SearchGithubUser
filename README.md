@@ -19,13 +19,13 @@ Make sure you have Yarn installed. If not, you can install it by following the i
 2. Clone the repository to your local machine:
 
    ```bash
-   cd github-repo-explorer
+   cd SearchGithubUser
    ```
 
 3. Install project dependencies using Yarn:
 
    ```bash
-      cd github-repo-explorer
+      yarn isntall
    ```
 
 ### Running the Application
