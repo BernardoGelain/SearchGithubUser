@@ -10,9 +10,9 @@ export default function Routes() {
     <BrowserRouter basename={"/"}>
       <RRDRouter>
         <Route path="/" element={<Home />} />
-        <Route path="/repos/:user/:reposCount" element={<Repos />} />
+        <Route path="repos/:user/:reposCount" element={<Repos />} />
         <Route
-          path="/repository/:user/:repoName/:reposCount"
+          path="repository/:user/:repoName/:reposCount"
           element={<RepositoryPage />}
         />
 
