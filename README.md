@@ -25,7 +25,7 @@ Make sure you have Yarn installed. If not, you can install it by following the i
 3. Install project dependencies using Yarn:
 
    ```bash
-      yarn isntall
+      yarn install
    ```
 
 ### Running the Application
