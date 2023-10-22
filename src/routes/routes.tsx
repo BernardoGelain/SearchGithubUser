@@ -8,7 +8,7 @@ export default function Routes() {
     <BrowserRouter basename={"/"}>
       <RRDRouter>
         <Route path="/" element={<Home />} />
-        <Route path="/repos/:user" element={<Repos />} />
+        <Route path="/repos/:user/:reposCount" element={<Repos />} />
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </RRDRouter>

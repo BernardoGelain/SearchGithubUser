@@ -35,4 +35,37 @@ button {
 a {
   text-decoration: none;
 }
+
+li a {
+    border-radius: 7px;
+    padding: 0.5rem 0.5rem;
+  
+    cursor: pointer;
+    color: ${(props) => props.theme.colors.text};
+  }
+  li.previous a,
+  li.next a,
+  li.break a {
+    border-color: transparent;
+  }
+  li.active a {
+    background: ${(props) => props.theme.colors.gradient} ;
+    border-color: transparent;
+    color: ${(props) => props.theme.colors.tableThead};
+    min-width: 32px;
+  }
+  li.disabled a {
+    color: grey;
+  }
+  li.disable,
+  li.disabled a {
+    cursor: default;
+  }
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
+
 `;
