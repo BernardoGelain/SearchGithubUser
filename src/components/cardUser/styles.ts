@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 500px;
+  width: 600px;
   padding: 10px;
   display: flex;
   border-radius: 11px;
   background-color: ${({ theme }) => theme.colors.backgroundMenu};
+  @media (max-width: 600px) {
+    width: 500px;
+  }
   @media (max-width: 500px) {
     width: 365px;
   }
@@ -35,7 +38,7 @@ export const ContainerFollowers = styled.div`
     display: flex;
     gap: 5px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     flex-wrap: wrap;
   }
 `;
