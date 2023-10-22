@@ -10,7 +10,7 @@ export const Container = styled.div`
     width: 500px;
   }
   @media (max-width: 500px) {
-    width: 365px;
+    width: 355px;
   }
 `;
 export const ContainerUser = styled.div`
@@ -19,9 +19,14 @@ export const ContainerUser = styled.div`
 `;
 export const ContainerProfile = styled.div`
   display: flex;
-  gap: 10px;
-  flex-direction: column;
+  justify-content: space-between;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 `;
+
 export const ContainerInfo = styled.div`
   display: flex;
   flex-direction: column;

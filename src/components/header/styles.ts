@@ -18,7 +18,7 @@ export const ButtonDarkLight = styled.button`
   height: 40px;
   border-radius: 10px;
   border: none;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.backgroundMenu};
   color: ${({ theme }) => theme.colors.primary};
   &:hover {
     color: ${({ theme }) => theme.colors.primary};

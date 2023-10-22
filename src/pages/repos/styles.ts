@@ -23,7 +23,7 @@ export const ContainerOrder = styled.div`
     width: 500px;
   }
   @media (max-width: 500px) {
-    width: 365px;
+    width: 355px;
   }
 `;
 

@@ -56,7 +56,7 @@ export default function Home() {
         )}
         <SearchContainer>
           <Search
-            placeholder="Busque por um usuário do GitHub"
+            placeholder="Search for a GitHub user"
             value={search}
             onChange={(e: ChangeEvent<HTMLInputElement>) => {
               setSearch(e.target.value);
@@ -67,9 +67,9 @@ export default function Home() {
           />
           <SearchButton onClick={returnUser}>
             {theme === "light" ? (
-              <GitHubLogo src={Lupa} /* onClick={returnUser}  */ />
+              <GitHubLogo src={Lupa} />
             ) : (
-              <GitHubLogo src={LupaDark} /* onClick={returnUser}  */ />
+              <GitHubLogo src={LupaDark} />
             )}
           </SearchButton>
         </SearchContainer>

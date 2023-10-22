@@ -16,7 +16,7 @@ export const ThemeContext = createContext({} as ThemeContextType);
 function App() {
   const [theme, setTheme] = useState<Themes>(() => {
     const storageValue = localStorage.getItem("GELAIN-THEME:theme-1.0.0");
-    console.log(storageValue);
+
     if (storageValue == "light") {
       return "light";
     } else if (storageValue == "dark") {

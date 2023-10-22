@@ -10,6 +10,10 @@ export const Container = styled.div`
 `;
 export const GitHubLogo = styled.img`
   max-width: 250px;
+
+  @media (max-width: 400px) {
+    width: 200px;
+  }
 `;
 export const SearchContainer = styled.div`
   display: flex;
