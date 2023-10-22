@@ -20,9 +20,12 @@ export const ContainerUser = styled.div`
 export const ContainerProfile = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
   div {
     display: flex;
+
     flex-direction: column;
+    justify-content: space-between;
     gap: 5px;
   }
 `;

@@ -1,27 +1,67 @@
-# React + TypeScript + Vite
+# GitHub Repository Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a web application for exploring GitHub repositories and their details.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+Make sure you have Yarn installed. If not, you can install it by following the instructions on the [Yarn website](https://classic.yarnpkg.com/en/docs/install/).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Installing Dependencies
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository to your local machine:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+   ```bash
+   git clone https://github.com/BernardoGelain/SearchGithubUser.git
+   ```
+
+2. Clone the repository to your local machine:
+
+   ```bash
+   cd github-repo-explorer
+   ```
+
+3. Install project dependencies using Yarn:
+
+   ```bash
+      cd github-repo-explorer
+   ```
+
+### Running the Application
+
+To start the application, run the following command:
+
+```bash
+   yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Usage
+
+<ul>The root route where you can search for a GitHub user.</ul>
+<ul>/repos/:user/:reposCount - Lists and paginates the repositories of the specified user.</ul>
+<ul>/repository/:user/:repoName/:reposCount - Provides detailed information about a specific repository.</ul>
+
+### Routes
+
+<ul>Visit the root route to search for a GitHub user.</ul>
+<ul>After searching, click on a user to view their repositories.</ul>
+<ul>Click on a repository to see its detailed information.</ul>
+
+### Routes
+
+<ul>This project is licensed under the MIT License - see the LICENSE file for details.</ul>
+
+### Demo
+
+### The root route where you can search for a GitHub user.
+
+<img src='https://i.postimg.cc/xTfGBjCs/image.png' border='0' alt='image'/>
+
+### /repos/:user/:reposCount - Lists and paginates the repositories of the specified user.
+
+<img src='https://i.postimg.cc/gjPsxvGd/image.png' border='0' alt='image'/>
+
+### /repository/:user/:repoName/:reposCount - Provides detailed information about a specific repository.
+
+<img src='https://i.postimg.cc/XJgGgFwn/image.png' border='0' alt='image'/>
