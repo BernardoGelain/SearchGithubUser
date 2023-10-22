@@ -5,7 +5,9 @@ type AppLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 function AppLink({ children, ...props }: AppLinkProps) {
   return (
     <AppLinkContainer>
-      <AppLinkAnchor href={props.href}>{children}</AppLinkAnchor>
+      <AppLinkAnchor href={props.href} target={props.target}>
+        {children}
+      </AppLinkAnchor>
       <UnderlineLink></UnderlineLink>
     </AppLinkContainer>
   );

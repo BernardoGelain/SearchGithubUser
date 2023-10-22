@@ -39,6 +39,9 @@ export const Title = styled.span`
   color: ${({ theme }) => theme.colors.text};
   font-size: 20px;
   font-weight: bold;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 export const Text = styled.span`

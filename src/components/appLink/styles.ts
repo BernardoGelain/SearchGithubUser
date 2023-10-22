@@ -4,18 +4,18 @@ export const AppLinkContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const AppLinkAnchor = styled.a`
+  display: flex;
+  word-wrap: break-word !important;
+  flex-wrap: wrap;
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: 16px;
   color: ${({ theme }) => theme.colors.text};
-  &:hover {
-    width: 100%;
-    transition: 500ms;
-  }
 `;
 
 export const UnderlineLink = styled.div`

@@ -15,16 +15,32 @@ export const Container = styled.div`
 `;
 
 export const ContainerOrder = styled.div`
-  width: 600px;
   display: flex;
-  align-items: flex-end;
-  gap: 20px;
+  justify-content: space-between;
+  width: 600px;
+
   @media (max-width: 600px) {
     width: 500px;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   @media (max-width: 500px) {
     width: 355px;
   }
+  div {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+  }
+`;
+export const Star = styled.img`
+  width: 32px;
+  margin-top: 15px;
+`;
+export const StarFilled = styled.img`
+  width: 28px;
+  margin-top: 15px;
 `;
 
 export const Select = styled.select`
@@ -41,7 +57,11 @@ export const Select = styled.select`
 
 export const Arrow = styled.img`
   width: 30px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+`;
+export const ArrowStar = styled.img`
+  width: 30px;
+  margin-top: 15px;
 `;
 export const Label = styled.label`
   display: flex;

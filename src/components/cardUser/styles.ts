@@ -50,9 +50,11 @@ export const ContainerFollowers = styled.div`
 export const BoldSpan = styled.span`
   font-size: 18px;
   font-weight: 600;
+  color: ${({ theme }) => theme.colors.text};
 `;
 export const MinorSpan = styled.span`
   font-size: 14px;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Avatar = styled.img`

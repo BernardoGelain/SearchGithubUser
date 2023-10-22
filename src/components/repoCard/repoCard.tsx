@@ -16,9 +16,10 @@ import { useNavigate } from "react-router-dom";
 
 type Props = {
   repo: GitHubRepo;
+  reposCount: number;
 };
 
-export default function RepoCard({ repo }: Props) {
+export default function RepoCard({ repo, reposCount }: Props) {
   const { theme } = useContext(ThemeContext);
   const forkIcon = theme === "light" ? ForkBlack : ForkWhite;
   const navigate = useNavigate();
@@ -33,12 +34,12 @@ export default function RepoCard({ repo }: Props) {
           </div>
           <div>
             <Icon src={"/assets/star.png"} />
-            <Text>{repo.forks_count}</Text>
+            <Text>{repo.stargazers_count}</Text>
           </div>
         </ContainerInfo>
       </GeneralContainer>
       <ButtonRepos
-        onClick={() => navigate(`/${repo.owner.login}/${repo.full_name}`)}
+        onClick={() => navigate(`/repository/${repo.full_name}/${reposCount}`)}
       >
         See more
       </ButtonRepos>
