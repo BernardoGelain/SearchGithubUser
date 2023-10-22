@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GitHubRepo } from "../../models/GitHubRepo";
 import Paginator from "../../components/paginator/paginator";
@@ -9,6 +9,7 @@ import {
   Arrow,
   Container,
   ContainerOrder,
+  Label,
   ReposContainer,
   Select,
 } from "./styles";
@@ -30,6 +31,7 @@ export default function Repos() {
   const [error, setError] = useState<Error | null>(null);
   const [order, setOrder] = useState("desc");
   const [page, setPage] = useState(1);
+  const [sortBy, setSortBy] = useState("created");
 
   const toggleOrder = () => {
     order === "desc" ? setOrder("asc") : setOrder("desc");
@@ -40,7 +42,9 @@ export default function Repos() {
 
     setPage(newPage);
   };
-
+  const handleChangeSort = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSortBy(e.target.value);
+  };
   async function returnRepos() {
     const url = `https://api.github.com/users/${user}/repos`;
     setIsFetching(true);
@@ -49,7 +53,7 @@ export default function Repos() {
         params: {
           per_page: 20,
           page: page,
-          sort: "created",
+          sort: sortBy,
           direction: order,
         },
       })
@@ -68,27 +72,30 @@ export default function Repos() {
   }
   useEffect(() => {
     returnRepos();
-  }, [page, order]);
+  }, [page, order, sortBy]);
   return (
     <>
       {isFetching && <Loader />}
       <Header />
       <Container>
         <ContainerOrder>
-          <Select defaultValue={"created"}>
-            <option value="created" key={1}>
-              Created
-            </option>
-            <option value="updated" key={2}>
-              Updated
-            </option>
-            <option value="pushed" key={3}>
-              Pushed
-            </option>
-            <option value="full_name" key={4}>
-              Name
-            </option>
-          </Select>
+          <Label>
+            Sort By:
+            <Select defaultValue={"created"} onChange={handleChangeSort}>
+              <option value="created" key={1}>
+                Created
+              </option>
+              <option value="updated" key={2}>
+                Updated
+              </option>
+              <option value="pushed" key={3}>
+                Pushed
+              </option>
+              <option value="full_name" key={4}>
+                Name
+              </option>
+            </Select>
+          </Label>
           {order === "asc" ? (
             theme === "light" ? (
               <Arrow src={ArrowUpBlack} onClick={toggleOrder} />

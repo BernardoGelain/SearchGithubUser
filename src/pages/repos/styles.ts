@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const ContainerOrder = styled.div`
   width: 600px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 20px;
   @media (max-width: 600px) {
     width: 500px;
@@ -41,4 +41,10 @@ export const Select = styled.select`
 
 export const Arrow = styled.img`
   width: 30px;
+  margin-bottom: 5px;
+`;
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  color: ${({ theme }) => theme.colors.text};
 `;
