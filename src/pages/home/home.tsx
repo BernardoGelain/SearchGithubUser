@@ -62,10 +62,10 @@ export default function Home() {
               setSearch(e.target.value);
             }}
             onKeyDown={(event) => {
-              event.code === "Enter" && returnUser();
+              event.code === "Enter" && search !== "" && returnUser();
             }}
           />
-          <SearchButton onClick={returnUser}>
+          <SearchButton onClick={returnUser} disabled={search === ""}>
             {theme === "light" ? (
               <GitHubLogo src={Lupa} />
             ) : (
